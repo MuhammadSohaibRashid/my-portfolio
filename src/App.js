@@ -170,8 +170,9 @@ function App() {
                   View Presentation
                 </a>
                 <a 
-                  href={`${process.env.PUBLIC_URL}/Explaination.mp4`}
-                  className="btn small video-btn"
+                href="https://drive.google.com/file/d/1NkoaMEH1zCmyRBX-Kb9IQb3Thx_cfsbL/preview"
+
+                className="btn small video-btn"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
