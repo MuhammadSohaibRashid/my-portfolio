@@ -154,7 +154,8 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className="project-card">
+
+          <div className="project-card">
             <div className="project-header">
               <h3>Junior Data Analyst Jobs - Canada</h3>
               <div className="project-links">
@@ -167,6 +168,14 @@ function App() {
                   }}
                 >
                   View Presentation
+                </a>
+                <a 
+                  href={`${process.env.PUBLIC_URL}/Explaination.mp4`}
+                  className="btn small video-btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  📹 Watch Detailed Explaination
                 </a>
               </div>
             </div>
