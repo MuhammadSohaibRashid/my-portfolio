@@ -175,27 +175,34 @@
             color: #3498db;
         }
 
-        .image-placeholder {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            border: 2px dashed #fff;
-            border-radius: 10px;
-            padding: 40px;
-            text-align: center;
-            color: white;
-            font-weight: bold;
-            margin: 20px 0;
-            min-height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
+.image-placeholder {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    border: 2px dashed #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    margin: 20px 0;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 
-        .image-placeholder::before {
-            content: '📷';
-            font-size: 3em;
-            margin-bottom: 10px;
-        }
+/* Hide camera icon when actual image is shown */
+
+
+/* New: Style for image inside */
+.image-placeholder img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
 
         .key-points {
             background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
@@ -335,9 +342,8 @@
             </div>
 
             <div class="image-placeholder">
-                <img src="Architecture Diagram.html" alt="Architecture Diagram" style="width: 100%; max-width: 900px; height: auto;">
+                <img src="a1.png" alt="Architecture Diagram" style="width: 100%; max-width: 1200px; height: auto;">
 
-                <div>Show your complete data pipeline flow</div>
             </div>
 
             <div class="key-points">
@@ -380,7 +386,12 @@
             </div>
 
             <div class="image-placeholder">
-                <img src="Scrappingarchitecture.png" alt="Scrappingarchitecture" style="width: 100%; max-width: 250px; height: 100;" >
+                <div style="max-width: 400px; margin: 20px auto; padding: 10px; border-radius: 10px; background: #f9f9f9;">
+  <img src="Scrappingarchitecture.png" 
+       alt="Scrapping Architecture" 
+       style="max-width: 50%; height: auto; display: block; margin: 0 auto;" />
+</div>
+
 
             </div>
 
@@ -388,7 +399,6 @@
                 <h3>Challenges Overcome:</h3>
                 <ul>
                     <li>Dynamic CSS selectors on Glassdoor</li>
-                    <li>Login requirements for full job descriptions</li>
                     <li>Rate limiting and bot detection</li>
                     <li>Incomplete data requiring AI augmentation</li>
                 </ul>
@@ -400,16 +410,7 @@
             <div class="slide-number">4</div>
             <h2>Data Cleaning & Preprocessing</h2>
             
-            <div class="content-grid">
-                <div class="image-placeholder">
-                    INSERT BEFORE CLEANING VISUALIZATION
-                    <div>Raw data visualization (Matplotlib/Seaborn)</div>
-                </div>
-                <div class="image-placeholder">
-                    INSERT AFTER CLEANING VISUALIZATION  
-                    <div>Cleaned data visualization</div>
-                </div>
-            </div>
+
 
             <div class="key-points">
                 <h3>Data Quality Issues Addressed:</h3>
@@ -438,8 +439,8 @@
             <h2>ETL Process with SSIS</h2>
             
             <div class="image-placeholder">
-                INSERT SSIS PACKAGE SCREENSHOT HERE
-                <div>SSIS Control Flow and Data Flow Tasks</div>
+                <img src="7.png" alt="Sequence Container" style="width: 100%; max-width: 1200px; height: auto;">
+
             </div>
 
             <div class="content-grid">
@@ -467,8 +468,8 @@
             </div>
 
             <div class="image-placeholder">
-                INSERT DATABASE SCHEMA DIAGRAM
-                <div>SQL Server database schema</div>
+                <img src="8.png" alt="Facts Table" style="width: auto; max-width: 800px; height: auto;">
+
             </div>
         </div>
 
@@ -478,8 +479,8 @@
             <h2>SQL Analysis & Data Exploration</h2>
             
             <div class="image-placeholder">
-                INSERT SQL QUERIES SCREENSHOTS
-                <div>Key SQL queries for data analysis</div>
+                <img src="10.png" alt="Facts Table" style="width: 100%; max-width: 800px; height: auto;">
+
             </div>
 
             <div class="key-points">
@@ -490,20 +491,10 @@
                     <li>Most in-demand skills and technologies</li>
                     <li>Job posting trends over time</li>
                     <li>Remote vs on-site opportunities</li>
-                    <li>Experience level requirements analysis</li>
                 </ul>
             </div>
 
-            <div class="content-grid">
-                <div class="image-placeholder">
-                    INSERT QUERY RESULTS TABLE
-                    <div>Sample query results</div>
-                </div>
-                <div class="image-placeholder">
-                    INSERT PERFORMANCE METRICS
-                    <div>Query performance optimization</div>
-                </div>
-            </div>
+
         </div>
 
         <!-- Slide 7: Power BI Data Model -->
@@ -512,7 +503,8 @@
             <h2>Power BI Data Modeling</h2>
             
             <div class="image-placeholder">
-                INSERT POWER BI DATA MODEL SCREENSHOT
+                <img src="6.png" alt="Data Modelling" style="width: 100%; max-width: 800px; height: auto;">
+
                 <div>Dimensional model with relationships</div>
             </div>
 
@@ -530,6 +522,7 @@
                 <div class="content-box">
                     <h3>Relationship Design</h3>
                     <ul style="list-style-type: disc; padding-left: 20px;">
+                        <li>Data Bridges To Initaiate the Primary Key</li>
                         <li>Star schema implementation</li>
                         <li>One-to-many relationships</li>
                         <li>Cross-filter direction optimization</li>
@@ -546,26 +539,27 @@
             <h2>Interactive Dashboard Overview</h2>
             
             <div class="image-placeholder">
-                INSERT MAIN DASHBOARD SCREENSHOT
+                <img src="2.png" alt="Data Modelling" style="width: auto; max-width: 800px; height: auto;">
+
                 <div>Complete Power BI dashboard overview</div>
             </div>
 
             <div class="metrics-grid">
                 <div class="metric-card">
-                    <span class="metric-number">[X]</span>
-                    <div class="metric-label">Total Job Postings</div>
+                    <span class="metric-number">327</span>
+                    <div class="metric-label">Total Job Count</div>
                 </div>
                 <div class="metric-card">
-                    <span class="metric-number">[X]</span>
-                    <div class="metric-label">Unique Companies</div>
+                    <span class="metric-number">Ontario</span>
+                    <div class="metric-label">Top Hiring Province</div>
                 </div>
                 <div class="metric-card">
-                    <span class="metric-number">$[X]K</span>
+                    <span class="metric-number">$71.7K</span>
                     <div class="metric-label">Average Salary</div>
                 </div>
                 <div class="metric-card">
-                    <span class="metric-number">[X]</span>
-                    <div class="metric-label">Cities Covered</div>
+                    <span class="metric-number">Bachelors</span>
+                    <div class="metric-label">Most Sought Qualification</div>
                 </div>
             </div>
         </div>
