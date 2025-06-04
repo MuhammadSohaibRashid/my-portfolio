@@ -362,13 +362,14 @@ section:nth-child(odd) {
 
 .timeline-date {
   position: absolute;
-  left: 0;
+  left: -20px; /* Moved 10px to the left */
   top: 0;
   width: 90px;
   font-size: 0.85rem;
   font-weight: 500;
   color: var(--primary-color);
 }
+
 
 .timeline-content {
   background-color: white;
