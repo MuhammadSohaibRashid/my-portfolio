@@ -116,6 +116,38 @@
             border-radius: 10px;
             border: 1px solid #e1e8ed;
         }
+        .explanation-video {
+            margin: 40px auto;
+            max-width: 800px;
+            padding: 30px;
+            background: linear-gradient(135deg, #ffe29f 0%, #ffa99f 100%);
+            border-radius: 16px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            color: #333;
+            font-family: 'Segoe UI', sans-serif;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .explanation-video:hover {
+            transform: scale(1.01);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .explanation-video h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .explanation-video video {
+            width: 100%;
+            max-height: 450px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            outline: none;
+        }
+
 
         .tech-stack {
             display: flex;
@@ -854,6 +886,16 @@
                     </ul>
                 </div>
             </div>
+            <section id="explanation-video" class="explanation-video">
+  <h2>🎥 Detailed Walkthrough</h2>
+  <video controls poster="thumbnail.jpg">
+    <source src="Explaination.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</section>
+
+
+
 
 
 
