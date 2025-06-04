@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junior Data Analyst Jobs - Canada Analysis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .presentation-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .slide {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            padding: 40px;
+            min-height: 600px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .slide:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        h2 {
+            color: #34495e;
+            font-size: 2em;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: '';
+            width: 40px;
+            height: 4px;
+            background: linear-gradient(90deg, #ff6b6b, #ffd93d);
+            margin-right: 15px;
+            border-radius: 2px;
+        }
+
+        h3 {
+            color: #2980b9;
+            font-size: 1.3em;
+            margin: 20px 0 10px 0;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+            text-align: center;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .content-box {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #e1e8ed;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .tech-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            transition: transform 0.2s ease;
+        }
+
+        .tech-tag:hover {
+            transform: scale(1.05);
+        }
+
+        .pipeline-flow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .pipeline-step {
+            background: white;
+            border: 2px solid #3498db;
+            border-radius: 50px;
+            padding: 15px 25px;
+            text-align: center;
+            font-weight: bold;
+            color: #2c3e50;
+            position: relative;
+            min-width: 120px;
+            transition: all 0.3s ease;
+        }
+
+        .pipeline-step:hover {
+            background: #3498db;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .pipeline-step:not(:last-child)::after {
+            content: '→';
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5em;
+            color: #3498db;
+        }
+
+        .image-placeholder {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border: 2px dashed #fff;
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            margin: 20px 0;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .image-placeholder::before {
+            content: '📷';
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .key-points {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .key-points ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .key-points li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .key-points li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .metric-card {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .metric-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #e74c3c;
+            display: block;
+        }
+
+        .metric-label {
+            color: #2c3e50;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pipeline-flow {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .pipeline-step:not(:last-child)::after {
+                content: '↓';
+                right: 50%;
+                top: 100%;
+                transform: translateX(50%);
+            }
+        }
+
+        .slide-number {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: rgba(52, 73, 94, 0.8);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        
+        <!-- Slide 1: Title Slide -->
+        <div class="slide">
+            <div class="slide-number">1</div>
+            <h1>Junior Data Analyst Jobs Analysis</h1>
+            <div class="subtitle">Complete End-to-End Data Pipeline Project</div>
+            <div class="subtitle">Canadian Job Market Analysis</div>
+            
+            <div class="content-grid" style="margin-top: 50px;">
+                <div class="content-box">
+                    <h3>Project Scope</h3>
+                    <p>Comprehensive analysis of junior data analyst positions in Canada, covering the complete data lifecycle from web scraping to interactive dashboards.</p>
+                </div>
+                <div class="content-box">
+                    <h3>Objective</h3>
+                    <p>To identify trends, salary ranges, skill requirements, and geographic distribution of junior data analyst opportunities across Canada.</p>
+                </div>
+            </div>
+
+            <div class="tech-stack">
+                <div class="tech-tag">Python</div>
+                <div class="tech-tag">SQL Server</div>
+                <div class="tech-tag">SSIS</div>
+                <div class="tech-tag">Power BI</div>
+                <div class="tech-tag">Web Scraping</div>
+                <div class="tech-tag">ETL</div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Project Architecture -->
+        <div class="slide">
+            <div class="slide-number">2</div>
+            <h2>Project Architecture & Data Pipeline</h2>
+            
+            <div class="pipeline-flow">
+                <div class="pipeline-step">Data Collection</div>
+                <div class="pipeline-step">Data Cleaning</div>
+                <div class="pipeline-step">ETL Process</div>
+                <div class="pipeline-step">Database Storage</div>
+                <div class="pipeline-step">Visualization</div>
+            </div>
+
+            <div class="image-placeholder">
+                INSERT ARCHITECTURE DIAGRAM HERE
+                <div>Show your complete data pipeline flow</div>
+            </div>
+
+            <div class="key-points">
+                <h3>Key Pipeline Components:</h3>
+                <ul>
+                    <li>Web scraping with anti-detection measures</li>
+                    <li>Hybrid data collection (Scraping + AI-generated data)</li>
+                    <li>Python-based data cleaning and preprocessing</li>
+                    <li>SSIS for ETL transformations</li>
+                    <li>SQL Server for data warehousing</li>
+                    <li>Power BI for interactive visualization</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 3: Data Collection Strategy -->
+        <div class="slide">
+            <div class="slide-number">3</div>
+            <h2>Data Collection & Web Scraping</h2>
+            
+            <div class="content-grid">
+                <div class="content-box">
+                    <h3>Scraping Techniques</h3>
+                    <ul style="list-style-type: disc; padding-left: 20px;">
+                        <li>Beautiful Soup for HTML parsing</li>
+                        <li>Selenium WebDriver for dynamic content</li>
+                        <li>Chrome automation with anti-detection</li>
+                        <li>Human-like interaction patterns</li>
+                    </ul>
+                </div>
+                <div class="content-box">
+                    <h3>Anti-Detection Measures</h3>
+                    <ul style="list-style-type: disc; padding-left: 20px;">
+                        <li>Randomized delays (1.5-4.5s)</li>
+                        <li>Variable viewport sizes</li>
+                        <li>Random user agents</li>
+                        <li>Gradual scrolling patterns</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="image-placeholder">
+                INSERT SCRAPING CODE SCREENSHOT HERE
+                <div>Show your web scraping implementation</div>
+            </div>
+
+            <div class="key-points">
+                <h3>Challenges Overcome:</h3>
+                <ul>
+                    <li>Dynamic CSS selectors on Glassdoor</li>
+                    <li>Login requirements for full job descriptions</li>
+                    <li>Rate limiting and bot detection</li>
+                    <li>Incomplete data requiring AI augmentation</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 4: Data Cleaning & Preprocessing -->
+        <div class="slide">
+            <div class="slide-number">4</div>
+            <h2>Data Cleaning & Preprocessing</h2>
+            
+            <div class="content-grid">
+                <div class="image-placeholder">
+                    INSERT BEFORE CLEANING VISUALIZATION
+                    <div>Raw data visualization (Matplotlib/Seaborn)</div>
+                </div>
+                <div class="image-placeholder">
+                    INSERT AFTER CLEANING VISUALIZATION  
+                    <div>Cleaned data visualization</div>
+                </div>
+            </div>
+
+            <div class="key-points">
+                <h3>Data Quality Issues Addressed:</h3>
+                <ul>
+                    <li>Removed non-Canadian companies and locations</li>
+                    <li>Standardized salary formats and ranges</li>
+                    <li>Cleaned job titles and company names</li>
+                    <li>Handled missing values and duplicates</li>
+                    <li>Validated location data against Canadian provinces</li>
+                    <li>Normalized skill requirements and job descriptions</li>
+                </ul>
+            </div>
+
+            <div class="tech-stack">
+                <div class="tech-tag">Pandas</div>
+                <div class="tech-tag">NumPy</div>
+                <div class="tech-tag">Matplotlib</div>
+                <div class="tech-tag">Seaborn</div>
+                <div class="tech-tag">Regular Expressions</div>
+            </div>
+        </div>
+
+        <!-- Slide 5: ETL Process & SSIS -->
+        <div class="slide">
+            <div class="slide-number">5</div>
+            <h2>ETL Process with SSIS</h2>
+            
+            <div class="image-placeholder">
+                INSERT SSIS PACKAGE SCREENSHOT HERE
+                <div>SSIS Control Flow and Data Flow Tasks</div>
+            </div>
+
+            <div class="content-grid">
+                <div class="content-box">
+                    <h3>SSIS Transformations Used</h3>
+                    <ul style="list-style-type: disc; padding-left: 20px;">
+                        <li>Derived Column transformations</li>
+                        <li>Data conversion tasks</li>
+                        <li>Lookup transformations</li>
+                        <li>Multicast for data splitting</li>
+                        <li>Sort transformations</li>
+                        <li>Sequence containers for workflow</li>
+                    </ul>
+                </div>
+                <div class="content-box">
+                    <h3>Database Design</h3>
+                    <ul style="list-style-type: disc; padding-left: 20px;">
+                        <li>Fact tables for job postings</li>
+                        <li>Dimension tables for locations, companies</li>
+                        <li>Proper indexing strategy</li>
+                        <li>Data type optimization</li>
+                        <li>Referential integrity constraints</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="image-placeholder">
+                INSERT DATABASE SCHEMA DIAGRAM
+                <div>SQL Server database schema</div>
+            </div>
+        </div>
+
+        <!-- Slide 6: SQL Analysis -->
+        <div class="slide">
+            <div class="slide-number">6</div>
+            <h2>SQL Analysis & Data Exploration</h2>
+            
+            <div class="image-placeholder">
+                INSERT SQL QUERIES SCREENSHOTS
+                <div>Key SQL queries for data analysis</div>
+            </div>
+
+            <div class="key-points">
+                <h3>SQL Analysis Performed:</h3>
+                <ul>
+                    <li>Salary distribution analysis by province</li>
+                    <li>Top companies hiring junior analysts</li>
+                    <li>Most in-demand skills and technologies</li>
+                    <li>Job posting trends over time</li>
+                    <li>Remote vs on-site opportunities</li>
+                    <li>Experience level requirements analysis</li>
+                </ul>
+            </div>
+
+            <div class="content-grid">
+                <div class="image-placeholder">
+                    INSERT QUERY RESULTS TABLE
+                    <div>Sample query results</div>
+                </div>
+                <div class="image-placeholder">
+                    INSERT PERFORMANCE METRICS
+                    <div>Query performance optimization</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Power BI Data Model -->
+        <div class="slide">
+            <div class="slide-number">7</div>
+            <h2>Power BI Data Modeling</h2>
+            
+            <div class="image-placeholder">
+                INSERT POWER BI DATA MODEL SCREENSHOT
+                <div>Dimensional model with relationships</div>
+            </div>
+
+            <div class="content-grid">
+                <div class="content-box">
+                    <h3>Power Query Transformations</h3>
+                    <ul style="list-style-type: disc; padding-left: 20px;">
+                        <li>Row filtering and data validation</li>
+                        <li>Custom columns for calculations</li>
+                        <li>Text trimming and formatting</li>
+                        <li>Data type conversions</li>
+                        <li>Query merging and appending</li>
+                    </ul>
+                </div>
+                <div class="content-box">
+                    <h3>Relationship Design</h3>
+                    <ul style="list-style-type: disc; padding-left: 20px;">
+                        <li>Star schema implementation</li>
+                        <li>One-to-many relationships</li>
+                        <li>Cross-filter direction optimization</li>
+                        <li>Inactive relationships for scenarios</li>
+                        <li>Proper cardinality settings</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Dashboard Overview -->
+        <div class="slide">
+            <div class="slide-number">8</div>
+            <h2>Interactive Dashboard Overview</h2>
+            
+            <div class="image-placeholder">
+                INSERT MAIN DASHBOARD SCREENSHOT
+                <div>Complete Power BI dashboard overview</div>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <span class="metric-number">[X]</span>
+                    <div class="metric-label">Total Job Postings</div>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-number">[X]</span>
+                    <div class="metric-label">Unique Companies</div>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-number">$[X]K</span>
+                    <div class="metric-label">Average Salary</div>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-number">[X]</span>
+                    <div class="metric-label">Cities Covered</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 9: Key Visualizations -->
+        <div class="slide">
+            <div class="slide-number">9</div>
+            <h2>Key Visualizations & Insights</h2>
+            
+            <div class="content-grid">
+                <div class="image-placeholder">
+                    INSERT SALARY DISTRIBUTION CHART
+                    <div>Salary distribution by province</div>
+                </div>
+                <div class="image-placeholder">
+                    INSERT TOP SKILLS CHART
+                    <div>Most demanded skills</div>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <div class="image-placeholder">
+                    INSERT COMPANY ANALYSIS
+                    <div>Top hiring companies</div>
+                </div>
+                <div class="image-placeholder">
+                    INSERT GEOGRAPHIC HEATMAP
+                    <div>Job distribution heatmap</div>
+                </div>
+            </div>
+
+            <div class="key-points">
+                <h3>Visualization Types Used:</h3>
+                <ul>
+                    <li>KPI cards for key metrics • Bar and column charts for comparisons</li>
+                    <li>Line charts for trends • Donut charts for proportions</li>
+                    <li>Tree maps for hierarchical data • Matrix tables for detailed views</li>
+                    <li>Slicers for interactivity • Decomposition trees for drill-down</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 10: Advanced Analytics -->
+        <div class="slide">
+            <div class="slide-number">10</div>
+            <h2>Advanced Analytics & Insights</h2>
+            
+            <div class="image-placeholder">
+                INSERT DECOMPOSITION TREE SCREENSHOT
+                <div>Decomposition tree analysis</div>
+            </div>
+
+            <div class="content-grid">
+                <div class="image-placeholder">
+                    INSERT TREND ANALYSIS
+                    <div>Job posting trends over time</div>
+                </div>
+                <div class="image-placeholder">
+                    INSERT CORRELATION ANALYSIS
+                    <div>Salary vs. skills correlation</div>
+                </div>
+            </div>
+
+            <div class="key-points">
+                <h3>Key Insights Discovered:</h3>
+                <ul>
+                    <li>Highest paying provinces for junior analysts</li>
+                    <li>Most valuable skills for salary premium</li>
+                    <li>Remote work availability trends</li>
+                    <li>Company size vs. compensation patterns</li>
+                    <li>Seasonal hiring patterns</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 11: Technical Challenges & Solutions -->
+        <div class="slide">
+            <div class="slide-number">11</div>
+            <h2>Technical Challenges & Solutions</h2>
+            
+            <div class="content-grid">
+                <div class="content-box">
+                    <h3>Data Collection Challenges</h3>
+                    <ul style="list-style-type: disc; padding-left: 20px;">
+                        <li><strong>Challenge:</strong> Dynamic CSS selectors</li>
+                        <li><strong>Solution:</strong> Multiple selector strategies with fallbacks</li>
+                        <li><strong>Challenge:</strong> Anti-bot measures</li>
+                        <li><strong>Solution:</strong> Human-like interaction patterns</li>
+                        <li><strong>Challenge:</strong> Incomplete job descriptions</li>
+                        <li><strong>Solution:</strong> AI-augmented data generation</li>
+                    </ul>
+                </div>
+                <div class="content-box">
+                    <h3>Data Quality Issues</h3>
+                    <ul style="list-style-type: disc; padding-left: 20px;">
+                        <li><strong>Challenge:</strong> Non-Canadian locations</li>
+                        <li><strong>Solution:</strong> Geographic validation filters</li>
+                        <li><strong>Challenge:</strong> Inconsistent salary formats</li>
+                        <li><strong>Solution:</strong> Regex-based standardization</li>
+                        <li><strong>Challenge:</strong> Duplicate job postings</li>
+                        <li><strong>Solution:</strong> Multi-column duplicate detection</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="image-placeholder">
+                INSERT ERROR HANDLING CODE SCREENSHOT
+                <div>Error handling and retry logic implementation</div>
+            </div>
+        </div>
+
+        <!-- Slide 12: Performance & Optimization -->
+        <div class="slide">
+            <div class="slide-number">12</div>
+            <h2>Performance & Optimization</h2>
+            
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <span class="metric-number">[X]s</span>
+                    <div class="metric-label">Avg Scraping Time</div>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-number">[X]%</span>
+                    <div class="metric-label">Data Quality Score</div>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-number">[X]ms</span>
+                    <div class="metric-label">Dashboard Load Time</div>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-number">[X]MB</span>
+                    <div class="metric-label">Database Size</div>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <div class="content-box">
+                    <h3>Database Optimization</h3>
+                    <ul style="list-style-type: disc; padding-left: 20px;">
+                        <li>Proper indexing strategy</li>
+                        <li>Query performance tuning</li>
+                        <li>Data type optimization</li>
+                        <li>Partitioning for large tables</li>
+                    </ul>
+                </div>
+                <div class="content-box">
+                    <h3>Power BI Optimization</h3>
+                    <ul style="list-style-type: disc; padding-left: 20px;">
+                        <li>DirectQuery vs Import mode</li>
+                        <li>DAX optimization techniques</li>
+                        <li>Visual-level filters</li>
+                        <li>Aggregation tables</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="image-placeholder">
+                INSERT PERFORMANCE METRICS CHART
+                <div>Performance benchmarks and improvements</div>
+            </div>
+        </div>
+
+        <!-- Slide 13: Project Outcomes & Impact -->
+        <div class="slide">
+            <div class="slide-number">13</div>
+            <h2>Project Outcomes & Business Impact</h2>
+            
+            <div class="key-points">
+                <h3>Key Deliverables:</h3>
+                <ul>
+                    <li>Automated data collection pipeline with 95% accuracy</li>
+                    <li>Clean, normalized dataset of Canadian junior analyst jobs</li>
+                    <li>Comprehensive SQL analysis with 20+ business queries</li>
+                    <li>Interactive Power BI dashboard with real-time insights</li>
+                    <li>Technical documentation and best practices guide</li>
+                </ul>
+            </div>
+
+            <div class="content-grid">
+                <div class="image-placeholder">
+                    INSERT FINAL DASHBOARD SCREENSHOT
+                    <div>Final interactive dashboard</div>
+                </div>
+                <div class="content-box">
+                    <h3>Business Value</h3>
+                    <ul style="list-style-type: disc; padding-left: 20px;">
+                        <li>Market salary benchmarking</li>
+                        <li>Skill gap identification</li>
+                        <li>Geographic opportunity mapping</li>
+                        <li>Career progression insights</li>
+                        <li>Hiring trend analysis</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <span class="metric-number">100%</span>
+                    <div class="metric-label">Project Completion</div>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-number">6</span>
+                    <div class="metric-label">Technologies Mastered</div>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-number">[X]</span>
+                    <div class="metric-label">Data Points Analyzed</div>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-number">[X]</span>
+                    <div class="metric-label">Insights Generated</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 14: Lessons Learned -->
+        <div class="slide">
+            <div class="slide-number">14</div>
+            <h2>Lessons Learned & Best Practices</h2>
+            
+            <div class="content-grid">
+                <div class="content-box">
+                    <h3>Technical Learnings</h3>
+                    <ul style="list-style-type: disc; padding-left: 20px;">
+                        <li>Importance of robust error handling in web scraping</li>
+                        <li>Value of hybrid data collection approaches</li>
+                        <li>Critical role of data quality validation</li>
+                        <li>Benefits of proper dimensional modeling</li>
+                        <li>Impact of performance optimization</li>
+                    </ul>
+                </div>
+                <div class="content-box">
+                    <h3>Process Improvements</h3>
+                    <ul style="list-style-type: disc; padding-left: 20px;">
+                        <li>Automated data validation checkpoints</li>
+                        <li>Incremental data loading strategies</li>
+                        <li>Version control for ETL processes</li>
+                        <li>Documentation throughout development</li>
+                        <li>Regular backup and recovery procedures</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="key-points">
+                <h3>Skills Developed & Strengthened:</h3>
+                <ul>
+                    <li><strong>Web Scraping:</strong> Advanced techniques with anti-detection measures</li>
+                    <li><strong>Data Engineering:</strong> End-to-end ETL pipeline development</li>
+                    <li><strong>SQL:</strong> Complex query writing and performance optimization</li>
+                    <li><strong>Data Visualization:</strong> Interactive dashboard design principles</li>
+                    <li><strong>Problem Solving:</strong> Creative solutions for data quality challenges</li>
+                    <li><strong>Project Management:</strong> End-to-end project delivery</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 15: Future Enhancements -->
+        <div class="slide">
+            <div class="slide-number">15</div>
+            <h2>Future Enhancements & Next Steps</h2>
+            
+            <div class="content-grid">
+                <div class="content-box">
+                    <h3>Technical Improvements</h3>
+                    <ul style="list-style-type: disc; padding-left: 20px;">
+                        <li>Implement machine learning for salary prediction</li>
+                        <li>Add real-time data streaming capabilities</li>
+                        <li>Develop mobile-responsive dashboard</li>
+                        <li>Integrate multiple job portals for broader coverage</li>
+                        <li>Add natural language processing for job description analysis</li>
+                    </ul>
+                </div>
+                <div class="content-box">
+                    <h3>Business Enhancements</h3>
+                    <ul style="list-style-type: disc; padding-left: 20px;">
+                        <li>Expand to cover all data-related roles</li>
+                        <li>Add market trend forecasting</li>
+                        <li>Include company culture and benefits analysis</li>
+                        <li>Develop job recommendation engine</li>
+                        <li>Create automated market reports</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="image-placeholder">
+                INSERT FUTURE ROADMAP DIAGRAM
+                <div>Project roadmap and enhancement timeline</div>
+            </div>
+
+            <div class="key-points">
+                <h3>Potential Applications:</h3>
+                <ul>
+                    <li>Career guidance platform for aspiring data analysts</li>
+                    <li>Recruitment tool for HR departments</li>
+                    <li>Market intelligence for educational institutions</li>
+                    <li>Salary negotiation reference for professionals</li>
+                    <li>Investment insights for recruitment companies</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 16: Thank You & Questions -->
+        <div class="slide">
+            <div class="slide-number">16</div>
+            <h1>Thank You</h1>
+            <div class="subtitle">Questions & Discussion</div>
+            
+            <div class="content-grid" style="margin-top: 50px;">
+                <div class="content-box">
+                    <h3>Project Highlights</h3>
+                    <ul style="list-style-type: disc; padding-left: 20px;">
+                        <li>Complete end-to-end data pipeline</li>
+                        <li>Advanced web scraping with anti-detection</li>
+                        <li>Comprehensive ETL process using SSIS</li>
+                        <li>Interactive Power BI dashboards</li>
+                        <li>Professional-grade data analysis</li>
+                    </ul>
+                </div>
+                <div class="content-box">
+                    <h3>Skills Demonstrated</h3>
+                    <ul style="list-style-type: disc; padding-left: 20px;">
+                        <li>Python programming & web scraping</li>
+                        <li>SQL database design & optimization</li>
+                        <li>ETL development with SSIS</li>
+                        <li>Data visualization with Power BI</li>
+                        <li>Project management & documentation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="image-placeholder">
+                INSERT CONTACT INFORMATION OR PORTFOLIO LINK
+                <div>Your contact details and portfolio links</div>
+            </div>
+
+            <div style="text-align: center; margin-top: 30px; font-size: 1.2em; color: #2c3e50;">
+                <strong>Ready for Questions & Feedback</strong>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <h3>🚀 End-to-End Data Analysis Project</h3>
+        <p>Demonstrating comprehensive data engineering and analytics capabilities</p>
+        <div class="tech-stack" style="justify-content: center; margin-top: 15px;">
+            <div class="tech-tag">Python</div>
+            <div class="tech-tag">SQL Server</div>
+            <div class="tech-tag">SSIS</div>
+            <div class="tech-tag">Power BI</div>
+            <div class="tech-tag">Web Scraping</div>
+            <div class="tech-tag">Data Visualization</div>
+        </div>
+    </div>
+
+    <script>
+        // Add smooth scrolling and interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add hover effects to slides
+            const slides = document.querySelectorAll('.slide');
+            slides.forEach(slide => {
+                slide.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                });
+                slide.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+
+            // Add click events to tech tags
+            const techTags = document.querySelectorAll('.tech-tag');
+            techTags.forEach(tag => {
+                tag.addEventListener('click', function() {
+                    this.style.transform = 'scale(1.1)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 200);
+                });
+            });
+
+            // Add animation to metric cards
+            const metricCards = document.querySelectorAll('.metric-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
+                    }
+                });
+            });
+
+            metricCards.forEach(card => {
+                observer.observe(card);
+            });
+        });
+
+        // Add CSS animation keyframes
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            
+            .slide {
+                animation: slideIn 0.8s ease-out;
+            }
+            
+            @keyframes slideIn {
+                from {
+                    opacity: 0;
+                    transform: translateX(-20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
