@@ -293,7 +293,8 @@ function App() {
                   <span>Firebase</span>
                 </div>
                 <div className="project-links">
-                  <a href="#" className="btn small">Final Year Project</a>
+                  <button className="btn small" disabled>Final Year Project</button>
+                  
                 </div>
               </div>
             </div>
