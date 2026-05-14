@@ -1,14 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { FaLinkedin, FaGithub, FaEnvelope, FaMobile, FaPython, FaDatabase, FaAws, FaChartBar, FaCode, FaServer, FaCubes, FaRobot, FaBriefcase, FaGraduationCap, FaArrowDown, FaExternalLinkAlt, FaChartLine } from 'react-icons/fa';
-import { 
-  SiPowerbi,          
-  SiMicrosoftazure, 
-  SiFirebase,         
-  SiDocker,           
-  SiDjango,           
-  SiOdoo,            
-  SiN8N,              
-} from 'react-icons/si';
+import React, { useState, useEffect } from 'react';
+import { FaLinkedin, FaGithub, FaEnvelope, FaMobile, FaPython, FaDatabase, FaAws, FaChartBar, FaCode, FaRobot, FaGraduationCap, FaChartLine } from 'react-icons/fa';
+              
 import './App.css';
 
 function App() {
