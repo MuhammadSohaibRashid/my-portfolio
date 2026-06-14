@@ -247,7 +247,7 @@ function App() {
             </div>
             <div className="about-stats">
               <div className="stat-card">
-                <span className="stat-number">3+</span>
+                <span className="stat-number">1+</span>
                 <span className="stat-label">Years of experience</span>
               </div>
               <div className="stat-card">
