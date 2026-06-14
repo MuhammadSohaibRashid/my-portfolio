@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {
   FaLinkedin, FaGithub, FaEnvelope, FaMobile,
-  FaPython, FaDatabase, FaAws, FaChartBar,
-  FaCode, FaRobot, FaGraduationCap, FaChartLine,
+    FaGraduationCap, FaChartLine,
   FaExternalLinkAlt, FaChevronDown, FaChevronUp
 } from 'react-icons/fa';
 import './App.css';
